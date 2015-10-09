@@ -85,11 +85,11 @@ html {
 body {
     height: 100%;
     background-color: #ffffff;
-    background-image: url("images/overlay.png"), url("https://c2.staticflickr.com/8/7464/15845940426_8b028e8b10_b.jpg");
-    background-repeat: repeat, no-repeat;
-    background-size: 100px 100px, cover;
-    background-position: top left, top center;
-    background-attachment: fixed, fixed;
+    background-image:  url("https://c2.staticflickr.com/8/7464/15845940426_8b028e8b10_b.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
 }
 
 body:after {
@@ -484,7 +484,7 @@ body.is-loading #main {
     align-self: flex-end;
     width: 100%;
     padding: 1.5em 0 0 0;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 1);
     cursor: default;
     text-align: center;
 }
@@ -564,4 +564,7 @@ body.is-ie #wrapper {
     letter-spacing: normal;
 }
 
-.secondary-text img {height: 30px;}
+.secondary-text img {
+    margin-left: 5px;
+    height: 20px;
+}
