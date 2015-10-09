@@ -85,10 +85,10 @@ html {
 body {
     height: 100%;
     background-color: #ffffff;
-    background-image:  url("https://c2.staticflickr.com/8/7464/15845940426_8b028e8b10_b.jpg");
+    background-position: bottom center;
+    background-image:  url(https://c2.staticflickr.com/8/7491/15869766121_3a589702e8_b.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom center;
     background-attachment: fixed;
 }
 
