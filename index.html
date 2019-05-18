@@ -1,86 +1,88 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Adam Kucharczyk</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lte IE 8]>
     <script src="assets/js/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main.css" />
     <!--[if lte IE 9]>
     <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
     <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css"/>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
 </head>
+
 <body class="is-loading">
 
-<!-- Wrapper -->
-<div id="wrapper">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-    <!-- Main -->
-    <section id="main">
-        <header>
-            <span class="avatar"><img id="me" src="images/avatar.jpg" alt="Adam Kucharczyk"/></span>
+        <!-- Main -->
+        <section id="main">
+            <header>
+                <span class="avatar"><img id="me" src="images/avatar.jpg" alt="Adam Kucharczyk" /></span>
 
-            <h1>Adam Kucharczyk</h1>
+                <h1>Adam Kucharczyk</h1>
 
-            <p>JavaScript Developer</p>
+                <p>Front end Tech Lead</p>
 
-            <p class="secondary-text">
-                Currently working for <a href="http://www.sabre.pl/"><img
-                    src="http://www.sabre.com/images/sabre-logo.png" alt="Sabre"/></a>
-            </p>
-        </header>
+                <p class="secondary-text">
+                    <a href="https://www.about.hsbc.pl/"><img src="images/HSBC-logo.svg" alt="HSBC" /></a>
+                </p>
+            </header>
 
-        <footer>
-            <ul class="icons">
-                <li><a href="https://pl.linkedin.com/in/adamkucharczyk" class="fa-linkedin">LinkedIn</a></li>
-                <li><a href="https://www.flickr.com/photos/adam_kucharczyk/" class="fa-flickr">Flickr</a></li>
-                <li><a href="https://github.com/108adams" class="fa-github">GitHub</a></li>
+            <footer>
+                <ul class="icons">
+                    <li><a href="https://pl.linkedin.com/in/adamkucharczyk" class="fa-linkedin">LinkedIn</a></li>
+                    <li><a href="https://www.flickr.com/photos/adam_kucharczyk/" class="fa-flickr">Flickr</a></li>
+                    <li><a href="https://github.com/108adams" class="fa-github">GitHub</a></li>
+                </ul>
+            </footer>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="copyright">
+                <li>&copy; Adam Kucharczyk</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
         </footer>
-    </section>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <ul class="copyright">
-            <li>&copy; Adam Kucharczyk</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-        </ul>
-    </footer>
+    </div>
 
-</div>
+    <!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+    <script>
+        var images = [
+            "url(https://c2.staticflickr.com/4/3855/14856231959_39c6cb888d_b.jpg)",
+            "url(https://c2.staticflickr.com/8/7554/15685742879_6a96c7da7c_b.jpg)",
+            "url(https://c2.staticflickr.com/8/7491/15869766121_3a589702e8_b.jpg)"
+        ];
 
-<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-<script>
-    var images = [
-        "url(https://c2.staticflickr.com/4/3855/14856231959_39c6cb888d_b.jpg)",
-        "url(https://c2.staticflickr.com/8/7554/15685742879_6a96c7da7c_b.jpg)",
-        "url(https://c2.staticflickr.com/8/7491/15869766121_3a589702e8_b.jpg)"
-    ];
+        var index = 0;
 
-    var index = 0;
+        function registerClickOnImg() {
+            var img = document.getElementById('me');
+            img.addEventListener('click', function () {
+                document.body.style.backgroundImage = images[index];
+                index = (index + 1) % (images.length);
+            })
+        }
 
-    function registerClickOnImg() {
-        var img = document.getElementById('me');
-        img.addEventListener('click', function () {
-            document.body.style.backgroundImage = images[index];
-            index = (index + 1) % (images.length);
-        })
-    }
+        if ('addEventListener' in window) {
+            window.addEventListener('load', function () {
+                document.body.className = document.body.className.replace(/\bis-loading\b/, '');
+            });
+            document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 
-    if ('addEventListener' in window) {
-        window.addEventListener('load', function () {
-            document.body.className = document.body.className.replace(/\bis-loading\b/, '');
-        });
-        document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-
-        registerClickOnImg();
-    }
-</script>
+            registerClickOnImg();
+        }
+    </script>
 
 </body>
+
 </html>
